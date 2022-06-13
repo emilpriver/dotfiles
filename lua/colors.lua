@@ -1,3 +1,3 @@
 vim.g.tokyonight_style = 'night'
-vim.cmd([[colorscheme tokyonight]])
+vim.cmd([[colorscheme onedarkpro]])
 vim.o.background = 'dark'
