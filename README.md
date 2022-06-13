@@ -1,5 +1,5 @@
 # NVIM Config
 
-This config use [ALbin Groens quick.nvim](https://github.com/albingroen/quick.nvim) with some small config updates.
+This config use [Albin Groens quick.nvim](https://github.com/albingroen/quick.nvim) with some small config updates.
 
 
