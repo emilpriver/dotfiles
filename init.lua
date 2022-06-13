@@ -28,7 +28,11 @@ return require('packer').startup(function()
   use 'lukas-reineke/indent-blankline.nvim'
   use {
     'nvim-telescope/telescope.nvim',
-    requires = { {'nvim-lua/plenary.nvim'} }
+    requires = {
+      {'nvim-lua/popup.nvim'},
+      {'nvim-lua/plenary.nvim'},
+      {'nvim-telescope/telescope-fzf-native.nvim'}   
+    }
   }
   use { "nvim-telescope/telescope-file-browser.nvim" }
   use {
