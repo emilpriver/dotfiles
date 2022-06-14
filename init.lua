@@ -3,6 +3,7 @@ require('colors')
 require('telescope-config')
 require('coc-config')
 require('null-ls-config')
+require('refactoring-config')
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
@@ -46,6 +47,13 @@ return require('packer').startup(function()
     "jose-elias-alvarez/null-ls.nvim",
     requires = {
       {'nvim-lua/plenary.nvim'},
+    }
+  }
+  use {
+    "ThePrimeagen/refactoring.nvim",
+    requires = {
+      {"nvim-lua/plenary.nvim"},
+      {"nvim-treesitter/nvim-treesitter"}
     }
   }
 end)
