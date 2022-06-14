@@ -56,4 +56,7 @@ return require('packer').startup(function()
       {"nvim-treesitter/nvim-treesitter"}
     }
   }
+  use {
+    "kdheepak/lazygit.nvim"
+  }
 end)
