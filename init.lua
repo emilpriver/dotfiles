@@ -2,6 +2,7 @@ require('basics')
 require('colors')
 require('telescope-config')
 require('coc-config')
+require('null-ls-config')
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
@@ -40,5 +41,11 @@ return require('packer').startup(function()
     config = function()
       require"surround".setup {mappings_style = "surround"}
     end
+  }
+  use {
+    "jose-elias-alvarez/null-ls.nvim",
+    requires = {
+      {'nvim-lua/plenary.nvim'},
+    }
   }
 end)
