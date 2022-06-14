@@ -4,6 +4,7 @@ require('telescope-config')
 require('coc-config')
 require('null-ls-config')
 require('refactoring-config')
+require('rust-tools-config')
 
 require'nvim-treesitter.configs'.setup {
   ensure_installed = "all",
@@ -37,7 +38,15 @@ return require('packer').startup(function()
     }
   }
   use { "nvim-telescope/telescope-file-browser.nvim" }
-  use {
+  use {'hrsh7th/nvim-cmp'}
+  use {'hrsh7th/cmp-nvim-lsp'}
+  use {'hrsh7th/cmp-vsnip'}
+  use {'hrsh7th/cmp-path'}
+  use {'hrsh7th/cmp-buffer'}
+  use {'simrat39/rust-tools.nvim'}
+  use {'hrsh7th/vim-vsnip'}
+  
+  use { 
     "ur4ltz/surround.nvim",
     config = function()
       require"surround".setup {mappings_style = "surround"}
@@ -56,7 +65,6 @@ return require('packer').startup(function()
       {"nvim-treesitter/nvim-treesitter"}
     }
   }
-  use {
-    "kdheepak/lazygit.nvim"
-  }
+  use {"kdheepak/lazygit.nvim"}
+  use {'neovim/nvim-lspconfig'}
 end)
