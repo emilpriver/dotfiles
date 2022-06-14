@@ -45,7 +45,7 @@ return require('packer').startup(function()
   use {'hrsh7th/cmp-buffer'}
   use {'simrat39/rust-tools.nvim'}
   use {'hrsh7th/vim-vsnip'}
-  
+  use {'fatih/vim-go' }
   use { 
     "ur4ltz/surround.nvim",
     config = function()
