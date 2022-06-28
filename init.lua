@@ -4,22 +4,10 @@ require('telescope-config')
 require('coc-config')
 require('null-ls-config')
 require('refactoring-config')
-require('rust-tools-config')
-
-require'nvim-treesitter.configs'.setup {
-  ensure_installed = "all",
-  ignore_install = { "phpdoc" },
-  context_commentstring = {
-    enable = true
-  },
-  highlight = {
-    enable = true,
-    disable = { "lua" }
-  },
-  indent = {
-    enable = true
-  }
-}
+require('nvim-lsp-config')
+require('treesitter-config')
+require('spellsitter-config')
+require('fzf-lsp-config')
 
 return require('packer').startup(function()
   use 'wbthomason/packer.nvim'
@@ -66,5 +54,9 @@ return require('packer').startup(function()
     }
   }
   use {"kdheepak/lazygit.nvim"}
+  use {"f-person/git-blame.nvim"}
   use {'neovim/nvim-lspconfig'}
+  use {'nvim-telescope/telescope-fzf-native.nvim', run = 'cmake -S. -Bbuild -DCMAKE_BUILD_TYPE=Release && cmake --build build --config Release && cmake --install build --prefix build' }
+  use {'gfanto/fzf-lsp.nvim'}
+  use {'lewis6991/spellsitter.nvim'}
 end)

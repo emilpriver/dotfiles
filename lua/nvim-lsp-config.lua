@@ -65,6 +65,23 @@ cmp.setup({
 
 require('rust-tools').setup(opts)
 
+nvim_lsp['pyright'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+nvim_lsp['tsserver'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+}
+nvim_lsp['rust_analyzer'].setup{
+    on_attach = on_attach,
+    flags = lsp_flags,
+    -- Server-specific settings...
+    settings = {
+      ["rust-analyzer"] = {}
+    }
+}
+
 vim.cmd([[
 set completeopt=menuone,noinsert,noselect
 set shortmess+=c
